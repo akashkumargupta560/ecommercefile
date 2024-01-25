@@ -3,14 +3,35 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
+import { NavbarComponent } from './core/navbar/navbar.component';
+import { FooterComponent } from './core/footer/footer.component';
+import { SellerAuthComponent } from './website/seller-component/seller-auth/seller-auth.component';
+import { HomeComponent } from './website/home/home.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { SellerHomeComponent } from './website/seller-component/seller-home/seller-home.component';
+import { SellerProductListComponent } from './website/seller-component/seller-product-list/seller-product-list.component';
+import { SellerAddProductComponent } from './website/seller-component/seller-add-product/seller-add-product.component';
+import { SellerUpdateProductComponent } from './website/seller-component/seller-update-product/seller-update-product.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavbarComponent,
+    FooterComponent,
+    SellerAuthComponent,
+    HomeComponent,
+    SellerHomeComponent,
+    SellerProductListComponent,
+    SellerAddProductComponent,
+    SellerUpdateProductComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

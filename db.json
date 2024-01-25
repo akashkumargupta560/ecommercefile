@@ -1,0 +1,112 @@
+{
+  "sellers": [
+    {
+      "fullname": "vicky",
+      "email": "vicky@gmail.com",
+      "password": "vicky",
+      "id": 1
+    },
+    {
+      "fullname": "akash",
+      "email": "ak@gmail.com",
+      "password": "akash",
+      "id": 2
+    },
+    {
+      "fullname": "alina",
+      "email": "alina@gmail.com",
+      "password": "alina",
+      "id": 3
+    },
+    {
+      "fullname": "bhanu",
+      "email": "bhanu@gmail.com",
+      "password": "bhanu",
+      "id": 4
+    }
+  ],
+  "products": [
+    {
+      "productName": "oppo A17",
+      "price": "99990",
+      "category": "mobile (Android)",
+      "color": "white",
+      "description": "this is best Android phone ",
+      "image": "https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/m/0/r/-original-imagnfqyv8wuyfst.jpeg?q=70&crop=false",
+      "id": 4
+    },
+    {
+      "productName": "Realme 11 pro 5g",
+      "price": "27999",
+      "category": "android mobile",
+      "color": "sunrise beige",
+      "description": "this is most popular phone",
+      "image": "https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/k/t/2/11-pro-5g-rmx3771-realme-original-imagq6aszgmb4xja.jpeg?q=70&crop=false",
+      "id": 5
+    },
+    {
+      "productName": "samsung galaxy s24 ultra",
+      "price": "129999",
+      "category": "android mobile ",
+      "color": "titanium grey",
+      "description": "this is best android phone",
+      "image": "https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/f/n/u/-original-imagx9egm9mgmvab.jpeg?q=70&crop=false",
+      "id": 6
+    },
+    {
+      "productName": "infinix note 30 5G",
+      "price": "149999",
+      "category": "android mobile note",
+      "color": "interstellar blue",
+      "description": "this is best android phone",
+      "image": "https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/c/p/h/-original-imagqhyftnseqttk.jpeg?q=70&crop=false",
+      "id": 7
+    },
+    {
+      "productName": "Apple iphone 15",
+      "price": "66999",
+      "category": "ios phone",
+      "color": "blue",
+      "description": "this is best ios phone",
+      "image": "https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/1/i/x/-original-imagtc6fhhtqjnr9.jpeg?q=70&crop=false",
+      "id": 8
+    },
+    {
+      "productName": "vivo T2x 5G",
+      "price": "149999",
+      "category": "android mobile",
+      "color": "aurora gold",
+      "description": "this is best android phone",
+      "image": "https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/c/s/x/-original-imagzjhwaaewgj8r.jpeg?q=70&crop=false",
+      "id": 9
+    },
+    {
+      "productName": "Honor 90 5G",
+      "price": "29999",
+      "category": "android mobile",
+      "color": "midnight black",
+      "description": "this is best android phone",
+      "image": "https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/u/h/b/90-midnight-black-12gb-512gb-rea-nx9-honor-original-imagtsd3uhxefkga.jpeg?q=70&crop=false",
+      "id": 10
+    },
+    {
+      "productName": "Motorola g54 5G",
+      "price": "13999",
+      "category": "android mobile",
+      "color": "pear blue",
+      "description": "this is best android phone",
+      "image": "https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/z/1/c/-original-imagt5uhcnfy66wa.jpeg?q=70&crop=false",
+      "id": 11
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

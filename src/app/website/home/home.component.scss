@@ -1,0 +1,35 @@
+::ng-deep{
+    section{
+        margin: 10px 10px;
+        .carousel-page{
+            box-shadow:-5px 3px 20px 10px red;
+            // .carousel{
+            //     .carousel-inner{
+            //         .carousel-item{
+            //             img{
+            //                 height: 200px;
+            //             }
+            //         }
+            //     }
+            //     .carousel-control-next-icon, .carousel-control-prev-icon {
+            //         color: red;
+            //         background-color: red;
+            //         border-radius: 10px;
+            //     }
+            // }
+            ngb-carousel{
+                .picsum-img-wrapper{
+                    .product-images{
+                        // object-fit:;
+                        width: 100% !important;
+                        height: 350px;
+                    }
+                }
+                .carousel-control-next-icon,.carousel-control-prev-icon  {
+                    background-color: red;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+}

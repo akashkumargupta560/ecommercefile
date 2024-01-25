@@ -1,0 +1,29 @@
+::ng-deep {
+    .seller-home {
+        .card {
+            .card-body {
+                .card-text,.card-title {
+                    width: 136px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                .card-button{
+                    margin-left: 20px;
+                    span{
+                        margin-right: 20px;
+                        cursor: pointer;
+                        i{
+                            font-size: 21px;
+                        }
+                    }
+                }
+            }
+            .product-image{
+                img{
+                    height: 233px;
+                }
+            }
+        }
+    }
+}

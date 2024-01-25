@@ -1,0 +1,42 @@
+<div class="add-product-section mt-4">
+    <div class="">
+
+        <div class="row ">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <p class="text-success">{{updateProductMessage}}</p>
+                <div class="product-form">
+                    <form #addProduct="ngForm" (ngSubmit)="upDateProductForm(addProduct.value)">
+                        <div class="mb-3">
+                            <label class="form-label">Product Name</label>
+                            <input type="text" class="form-control" placeholder="" name="productName" ngModel="{{productData?.productName}}"/>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Product Price</label>
+                            <input type="text" class="form-control" placeholder="" name="price" ngModel="{{productData?.price}}"/>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Product Category</label>
+                            <input type="text" class="form-control" placeholder="" name="category" ngModel="{{productData?.category}}"/>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Product Color</label> 
+                            <input type="text" class="form-control" placeholder="" name="color" ngModel="{{productData?.color}}"/>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Product Description</label>
+                            <textarea class="form-control" placeholder="" rows="2" name="description" ngModel="{{productData?.description}}"></textarea>
+                          </div>
+                        <div class="mb-3">
+                            <label class="form-label">Product Url</label>
+                            <input type="text" class="form-control" placeholder="" name="image" ngModel="{{productData?.image}}"/>
+                        </div>
+                        <button type="submit" class="btn btn-primary d-grid gap-2 col-6 mx-auto mb-2">Update Product</button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+            
+        </div>
+    </div>
+</div>

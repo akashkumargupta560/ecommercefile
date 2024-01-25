@@ -1,0 +1,34 @@
+::ng-deep {
+    nav {
+        .container-fluid {
+            .collapse {
+                margin-left: 50px;
+
+                .input-box {
+                    width: 80%;
+                    //margin-left: 65px;
+                }
+                .users-menu{
+                    .user-logout, .seller-logout{
+                        background-color: red;
+                        border-radius: 10px;
+                        cursor: pointer;
+                    }
+                    .sellername{
+                        background-color: green;
+                        border-radius: 20px;
+                        margin-left: 12px;
+                        border: 1px solid;
+                        a{
+                            color: greenyellow;
+                        }
+                    }
+                }
+                // .seller-log{
+                //     justify-content: end !important;
+                //     width: 100% !important;
+                // }
+            }
+        }
+    }
+}

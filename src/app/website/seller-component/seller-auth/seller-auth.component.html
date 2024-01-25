@@ -1,0 +1,51 @@
+<div class="seller-section mt-3">
+  <!-- SignUp-Form -->
+  <div class="row mx-0" *ngIf="!isShowLogin">
+    <div class="col-md-6">
+      <h1>SignUp Application</h1>
+    </div>
+    <div class="col-md-6">
+      <form #sellerSignup="ngForm" (ngSubmit)="signUpForm(sellerSignup.value)">
+        <div class="mb-3">
+          <label class="form-label">FullName</label>
+          <input type="text" class="form-control" name="fullname" ngModel>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Email address</label>
+          <input type="email" class="form-control" name="email" ngModel>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Password</label>
+          <input type="password" class="form-control" name="password" ngModel>
+        </div>
+        <button type="submit" class="btn btn-primary d-grid gap-2 col-6 mx-auto mb-2">Submit</button>
+        <p>Already have Account? &nbsp;<a class="text-primery " (click)="openLoginform()">Click Login</a></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- Login-Form -->
+
+  <div class="row mx-0" *ngIf="isShowLogin">
+    <div class="col-md-6">
+      <h1>Login Application</h1>
+    </div>
+    <div class="col-md-6 mt-5">
+      <div class="alert alert-danger">
+        <strong>{{authError}}</strong> 
+      </div>
+      <form #sellerLogin="ngForm" (ngSubmit)="LoginForm(sellerLogin.value)">
+        <div class="mb-3">
+          <label class="form-label">Email address</label>
+          <input type="email" class="form-control" name="email" ngModel>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Password</label>
+          <input type="password" class="form-control" name="password" ngModel>
+        </div>
+        <button type="submit" class="btn btn-primary d-grid gap-2 col-6 mx-auto mb-2">Submit</button>
+        <p>Have not Account? &nbsp;<a class="text-primery" (click)="openSignUpform()">Click SignUp</a></p>
+      </form>
+    </div>
+  </div>
+</div>
