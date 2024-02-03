@@ -1,34 +1,28 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" routerLink="">E-commerce Template-Form</a>
+        <a class="navbar-brand" routerLink="">E-commerce<span>Template-Form</span></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse ml-5" id="navbarSupportedContent">
             <form class="d-flex me-auto mb-2 mb-lg-0 input-box" *ngIf="menuItem=='default'">
-                <input class="form-control me-2 " type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
+                <input #searchInput class="form-control me-2 " type="text" (keyup)="searchProductList($event)"
+                    (blur)="hideSearch()" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit"
+                    (click)="submitSearch(searchInput.value)">Search</button>
+                <ul class="suggested-result" *ngIf="searchResult">
+                    <li *ngFor="let data of searchResult">
+                        <a (mousedown)="redirectToDetails(data.id)">{{data.productName || data.color}}</a>
+                    </li>
+                </ul>
             </form>
             <div class="d-flex justify-content-end w-100" [ngSwitch]="menuItem">
+
                 <ul class="navbar-nav users-menu" *ngSwitchCase="'default'">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" routerLink="">Home</a>
                     </li>
-                    <!-- <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Dropdown
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">About Us</a>
                     </li>
@@ -36,15 +30,35 @@
                         <a class="nav-link active" routerLink="seller-auth">Seller</a>
                     </li>
                     <li class="nav-item cursor-pointer">
-                        <a class="nav-link active cursor-pointer">Login</a>
+                        <a class="nav-link active user-auth" routerLink="/user-auth">Login/SignUp</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Cart(0)</a>
-                    </li>
-                    <li class="nav-item user-logout active">
-                        <a class="nav-link active" aria-current="page" >LogOut</a>
+                        <a class="nav-link" href="#">Cart({{cartItems}})</a>
                     </li>
                 </ul>
+                f
+                <!-- For Users -->
+
+                <ul class="navbar-nav users-menu" *ngSwitchCase="'user'">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" routerLink="">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" routerLink="seller-auth">Seller</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Cart({{cartItems}})</a>
+                    </li>
+                    <li class="nav-item user-logout active">
+                        <a class="nav-link active" (click)="logOut()">LogOut</a>
+                    </li>
+                    <li class="nav-item active sellername">
+                        <a class="nav-link">{{userName | titlecase}}</a>
+                    </li>
+                </ul>
+
+                <!-- For Seller -->
+
                 <ul class="navbar-nav users-menu" *ngSwitchCase="'seller'">
                     <li class="nav-item">
                         <a class="nav-link active" routerLink="seller-add-product">Add Product</a>
@@ -56,7 +70,7 @@
                         <a class="nav-link active" (click)="logOut()">LogOut</a>
                     </li>
                     <li class="nav-item active sellername">
-                        <a class="nav-link" >{{sellerName | titlecase}}</a>
+                        <a class="nav-link">{{sellerName | titlecase}}</a>
                     </li>
                 </ul>
             </div>

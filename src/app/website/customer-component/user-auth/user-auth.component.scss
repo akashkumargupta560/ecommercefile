@@ -1,0 +1,16 @@
+::ng-deep{
+    .user-auth-section{
+        h1{
+            text-align: center;
+            margin-top: 80px;
+        }
+        p{
+            a{
+                cursor: pointer;
+            }
+        }
+        button:disabled{
+            cursor: not-allowed;
+        }
+    }
+}

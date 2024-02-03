@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { SellerService } from 'src/app/services/seller.service';
-import { sellerLogin, sellerRegister } from 'src/app/shared/data-type';
+import { authLogin, authRegister } from 'src/app/shared/data-type';
 
 @Component({
   selector: 'app-seller-auth',
@@ -16,7 +16,7 @@ export class SellerAuthComponent {
   ngOnInit():void{
     this.sellerSrv.reloadSeller();
   }
-  signUpForm(data:sellerRegister):void{
+  signUpForm(data:authRegister):void{
     // this.sellerSrv.fetchSellerPostApi(data).subscribe((resp:any)=>{
     //   console.warn(resp);
     //   if(resp){
@@ -25,7 +25,7 @@ export class SellerAuthComponent {
     // })
     this.sellerSrv.fetchSellerPostApi(data);
   }
-  LoginForm(data:sellerLogin):void{
+  LoginForm(data:authLogin):void{
     // this.sellerSrv.fetchSellerPostApi(data).subscribe((resp:any)=>{
     //   console.warn(resp);
     //   if(resp){

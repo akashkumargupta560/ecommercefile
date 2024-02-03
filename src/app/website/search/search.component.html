@@ -1,0 +1,17 @@
+<div class="searching-page" *ngIf="searchResult?.length; else noRecord">
+    <div class="row search-item mt-4" *ngFor="let searchData of searchResult">
+        <div class="col-md-3 images">
+            <a routerLink="/details/{{searchData.id}}">
+                <img src="{{searchData.image}}" alt=""></a>
+        </div>
+        <div class="col-md-8 details mt-5">
+            <a routerLink="/details/{{searchData.id}}"> <h4>{{searchData.productName |titlecase}}</h4></a>
+            <p><b>Price: {{searchData.price |currency:'INR':true}}</b></p>
+            <p><span>Color: {{searchData.color}}</span></p>
+            <p><span>Category: {{searchData.category}}</span></p>
+            <p>{{searchData.description}}</p>
+        </div>
+    </div>
+</div>
+
+<ng-template #noRecord><p class="sarchError">Result not found!!!</p></ng-template>

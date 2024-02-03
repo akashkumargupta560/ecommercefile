@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { EventEmitter, Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, map } from 'rxjs';
-import { sellerLogin, sellerRegister } from '../shared/data-type';
+import { authLogin, authRegister } from '../shared/data-type';
 import { Router } from '@angular/router';
 
 @Injectable({
@@ -20,7 +20,7 @@ export class SellerService {
   //     return response;
   //   }))
   // }
-  fetchSellerPostApi(data:sellerRegister){
+  fetchSellerPostApi(data:authRegister){
      this.http.post(this.apiUrl,data,{observe:'response'}).subscribe((result)=>{
       if(result){
         this.isSellerloggedIn.next(true);
@@ -35,7 +35,7 @@ export class SellerService {
       this.router.navigate(['seller-home']);
     }
   }
-  fetchLoginPostApi(data:sellerLogin){
+  fetchLoginPostApi(data:authLogin){
     this.http.get(`http://localhost:3000/sellers?email=${data.email}&password=${data.password}`,
     {observe:'response'}).subscribe((response:any)=>{
       if(response && response.body && response.body.length === 1){

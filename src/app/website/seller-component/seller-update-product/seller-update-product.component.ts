@@ -17,7 +17,7 @@ export class SellerUpdateProductComponent {
 
     let productId = this.route.snapshot.paramMap.get('id');
      console.log(productId)
-    productId && this.productSrv.productEditApi(productId).subscribe((data: any) => {
+    productId && this.productSrv.getProductIdApi(productId).subscribe((data: any) => {
       this.productData = data
     })
   }

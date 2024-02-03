@@ -1,0 +1,64 @@
+<div class="user-auth-section mt-3">
+    <!--User SignUp-Form -->
+    <div class="row mx-0" *ngIf="!isShowLogin">
+      <div class="col-md-6">
+        <h1>User SignUp Application</h1>
+      </div>
+      <div class="col-md-6">
+        <form #userSignup="ngForm" (ngSubmit)="userSignUpForm(userSignup.value)">
+          <div class="mb-3">
+            <label class="form-label">FullName</label>
+            <input type="text" class="form-control" name="fullname" ngModel>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Email address</label>
+            <input type="email" class="form-control" name="email" ngModel #email="ngModel" required/>
+            <p>
+              <span *ngIf="email.invalid && email.touched" class="text-danger">Please Enter Email Address.</span>
+              <!-- <span *ngIf="email.invalid && email.touched"></span> -->
+            </p>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input type="password" class="form-control" name="password" ngModel ngModel #password="ngModel" required minlength="4" maxlength="20"/>
+            <p>
+              <span *ngIf="password.invalid && password.touched" class="text-danger">Please Enter Valid password</span>
+            </p>
+          </div>
+          <button type="submit" class="btn btn-primary d-grid gap-2 col-6 mx-auto mb-2">SignUp</button>
+          <p>Already have Account? &nbsp;<a class="text-primery " (click)="openLoginform()">Click Login</a></p>
+        </form>
+      </div>
+    </div>
+  
+    <!-- User Login-Form -->
+  
+    <div class="row mx-0" *ngIf="isShowLogin">
+      <div class="col-md-6">
+        <h1>Login Application</h1>
+      </div>
+      <div class="col-md-6 mt-5">
+        <div class="alert alert-danger">
+          <strong>{{authError}}</strong> 
+        </div>
+        <form #userLogin="ngForm" (ngSubmit)="userLoginForm(userLogin.value)">
+          <div class="mb-3">
+            <label class="form-label">Email address</label>
+            <input type="email" class="form-control" name="email" ngModel #email="ngModel" required>
+            <p>
+              <span *ngIf="email.invalid && email.touched" class="text-danger">Please Enter Valid Email</span>
+            </p>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input type="password" class="form-control" name="password" ngModel #password="ngModel" required />
+            <p>
+              <span *ngIf="password.invalid && password.touched" class="text-danger">Please Enter Valid password</span>
+            </p>
+          </div>
+          <button type="submit" [disabled]="userLogin.invalid" class="btn btn-primary d-grid gap-2 col-6 mx-auto mb-2">Login</button>
+          <p>Have not Account? &nbsp;<a class="text-primery" (click)="openSignUpform()">Click SignUp</a></p>
+        </form>
+      </div>
+    </div>
+  </div>

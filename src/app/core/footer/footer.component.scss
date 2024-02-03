@@ -1,0 +1,199 @@
+::ng-deep {
+
+    footer {
+        .first-footer {
+            background-color: #363636;
+            color: #fff;
+
+            .company-details {
+                margin-left: auto;
+                margin: 25px 0px;
+                border-right: 2px solid gray;
+
+                .about-company {
+                    .logo{
+                        img{
+                            border-radius: 5px;
+                        }
+                    }
+                    h3 {
+                        font-size: 20px;
+                        font-weight: 500;
+                    }
+
+                    p {
+                        font-size: 11px;
+                    }
+                }
+
+                // .about-features{
+                .features,
+                .help-context,
+                .consumer-policy {
+                    p {
+                        margin-bottom: 0px;
+                        font-size: 12px;
+
+                        a {
+                            color: #fff;
+                            text-decoration: none;
+                        }
+
+                        a:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+
+                // }
+            }
+
+            .company-contact {
+                margin-left: auto;
+                margin: 25px 0px;
+
+                .contact {
+                    .social-media {
+                        span {
+                            padding-left: 8px;
+
+                            i {
+                                padding: 3px 5px 3px 5px;
+                                background-color: #1e1a1a;;
+                                border-radius: 5px;
+                                cursor: pointer;
+                            }
+                            i:hover{
+                                color: rgb(0, 255, 115);
+                            }
+                        }
+                    }
+
+                    a {
+                        font-size: 14px;
+                    }
+
+                    span:hover {
+                        text-decoration: underline;
+                    }
+                }
+
+                .company-address {
+                    h5 {
+                        font-size: 15px;
+                    }
+
+                    p {
+                        font-size: 13px;
+                    }
+                }
+            }
+
+        }
+
+        .second-footer {
+            background-color: #000;
+            .position {
+                color: #adabab;
+                padding: 25px 0px;
+                .social-media {
+                    display: flex;
+                    span {
+                        padding-left: 10px;
+
+                        i {
+                            padding: 3px 5px 3px 5px;
+                            background-color: #1e1a1a;;
+                            border-radius: 5px;
+                            cursor: pointer;
+                        }
+                        i:hover{
+                            color: aqua;
+                        }
+                    }
+                }
+                .help-center{
+                    text-align: center;
+                    span{
+                        padding: 0px 10px;
+                        a{
+                            text-decoration: none;
+                            color: #adabab;
+                        }
+                        a:hover{
+                            text-decoration: underline;
+                            color: cadetblue;
+                        }
+                    }
+                }
+
+                .payment-card {
+                    span i {
+                        color: white;
+                        font-size: 25px;
+                        padding-left: 10px;
+                    }
+                }
+
+            }
+        }
+
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .position {
+        flex-wrap: wrap;
+    }
+
+    .first-footer {
+        .company-details {
+
+            .about-company,
+            .about-features,
+            .help-context,
+            .consumer-policy {
+                padding-bottom: 12px;
+            }
+        }
+
+        .company-contact {
+            .contact {
+                .social-media {
+                    padding: 12px 0px;
+                }
+            }
+            .company-address{
+                padding-left: 5px !important;
+            }
+        }
+
+    }
+}
+
+@media only screen and (max-width: 767px) {
+   
+}
+
+@media only screen and (max-width: 991px) {
+
+    footer {
+        .first-footer {
+            .abcd{
+                padding: 0px !important;
+            }
+            .company-contact {
+                .company-address {
+                    padding-left: 10px;
+                }
+            }
+        }
+
+        .second-footer {
+            .position {
+                padding: 30px 30px;
+            }
+        }
+    }
+
+}

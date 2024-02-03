@@ -14,6 +14,9 @@ import { SellerProductListComponent } from './website/seller-component/seller-pr
 import { SellerAddProductComponent } from './website/seller-component/seller-add-product/seller-add-product.component';
 import { SellerUpdateProductComponent } from './website/seller-component/seller-update-product/seller-update-product.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SearchComponent } from './website/search/search.component';
+import { ProductDetailsComponent } from './website/customer-component/product-details/product-details.component';
+import { UserAuthComponent } from './website/customer-component/user-auth/user-auth.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +27,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     SellerHomeComponent,
     SellerProductListComponent,
     SellerAddProductComponent,
-    SellerUpdateProductComponent
+    SellerUpdateProductComponent,
+    SearchComponent,
+    ProductDetailsComponent,
+    UserAuthComponent
   ],
   imports: [
     BrowserModule,

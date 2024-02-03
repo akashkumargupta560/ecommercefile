@@ -3,13 +3,39 @@
         <ngb-carousel *ngIf="popularProducts">
             <ng-template *ngFor="let items of popularProducts" ngbSlide>
                 <div class="picsum-img-wrapper">
-                    <img class="product-images" src="{{items.image}}" alt="Random first slide" />
+                    <a routerLink="/details/{{items.id}}">
+                        <img class="product-images" src="{{items.image}}" alt="Random first slide" />
+                    </a>
                 </div>
                 <div class="carousel-caption">
-                    <!-- <h3>10 seconds between slides...</h3> -->
+
                     <p class="text-bold">{{items.description}}.</p>
                 </div>
             </ng-template>
         </ngb-carousel>
+    </div>
+    <div class="trendyproduct-page mt-4">
+        <h3>Trending Products</h3>
+        <div class="row">
+            <div class="col-md-3 mb-2" *ngFor="let itemList of trendingProductData"> 
+                <div class="card-group">
+                    <div class="card">
+                        <a routerLink="/details/{{itemList.id}}">
+                            <img src="{{itemList.image}}" class="card-img-top" alt="...">
+                        </a>
+                        
+                        <div class="card-body text-center">
+                            <h5 class="card-title">{{itemList.productName}}</h5>
+                            <p class="card-text mb-0">Price: {{itemList.price | currency: 'INR':'symbol':'1.2-2'}}</p>
+                            <p class="card-text">Color: {{itemList.color}}</p>
+                            <div class="card-footer">
+                                <a routerLink="/details/{{itemList.id}}" class="card-link">View Details</a>
+                                <a href="#" class="card-link">Add to Card</a>
+                              </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
     </div>
 </section>

@@ -97,6 +97,118 @@
       "description": "this is best android phone",
       "image": "https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/z/1/c/-original-imagt5uhcnfy66wa.jpeg?q=70&crop=false",
       "id": 11
+    },
+    {
+      "productName": "lenovo HP",
+      "price": "34450",
+      "category": "Laptop",
+      "color": "black",
+      "description": "this is HP laptop. Intel core i3 11th Gen, (8GB/256 GB SSD) 1.56KG",
+      "image": "https://rukminim2.flixcart.com/image/416/416/xif0q/computer/c/o/k/-original-imagwzwdcrrewxxz.jpeg?q=70&crop=false",
+      "id": 12
+    },
+    {
+      "productName": "PHILIPS Home Theatre",
+      "price": "7499",
+      "category": "Speaker",
+      "color": "Black",
+      "description": "MMS8085B/94 Convertible 80 W Bluetooth Home Theatre  (Black, 2.1 Channel)",
+      "image": "https://rukminim2.flixcart.com/image/416/416/ko0d6kw0/speaker/home-theatre/o/i/g/mms8085b-94-philips-original-imag2k3tn8zrgw4f.jpeg?q=70&crop=false",
+      "id": 13
+    },
+    {
+      "productName": "U.S. POLO ASSN. Shoe",
+      "price": "3374",
+      "category": "Sports Shoe",
+      "color": "Multicolor",
+      "description": "Running Shoes For Men ",
+      "image": "https://rukminim2.flixcart.com/image/832/832/xif0q/shoe/f/a/z/10-2fd21478-10-u-s-polo-assn-multi2-original-imagpuft79zbjmnh.jpeg?q=70&crop=true",
+      "id": 14
+    }
+  ],
+  "users": [
+    {
+      "fullname": "mukesh",
+      "email": "mukesh@gmail.com",
+      "password": "mukesh",
+      "id": 1
+    },
+    {
+      "fullname": "anil",
+      "email": "anil@gmail.com",
+      "password": "anil",
+      "id": 2
+    },
+    {
+      "fullname": "monu",
+      "email": "monu@gmail.com",
+      "password": "monu",
+      "id": 3
+    },
+    {
+      "fullname": "rohit",
+      "email": "rohit@gmail.com",
+      "password": "rohit",
+      "id": 4
+    }
+  ],
+  "cart": [
+    {
+      "productName": "lenovo HP",
+      "price": "34450",
+      "category": "Laptop",
+      "color": "black",
+      "description": "this is HP laptop. Intel core i3 11th Gen, (8GB/256 GB SSD) 1.56KG",
+      "image": "https://rukminim2.flixcart.com/image/416/416/xif0q/computer/c/o/k/-original-imagwzwdcrrewxxz.jpeg?q=70&crop=false",
+      "quantity": 2,
+      "productId": 12,
+      "id": 1
+    },
+    {
+      "productName": "lenovo HP",
+      "price": "34450",
+      "category": "Laptop",
+      "color": "black",
+      "description": "this is HP laptop. Intel core i3 11th Gen, (8GB/256 GB SSD) 1.56KG",
+      "image": "https://rukminim2.flixcart.com/image/416/416/xif0q/computer/c/o/k/-original-imagwzwdcrrewxxz.jpeg?q=70&crop=false",
+      "quantity": 2,
+      "productId": 12,
+      "id": 2
+    },
+    {
+      "productName": "lenovo HP",
+      "price": "34450",
+      "category": "Laptop",
+      "color": "black",
+      "description": "this is HP laptop. Intel core i3 11th Gen, (8GB/256 GB SSD) 1.56KG",
+      "image": "https://rukminim2.flixcart.com/image/416/416/xif0q/computer/c/o/k/-original-imagwzwdcrrewxxz.jpeg?q=70&crop=false",
+      "quantity": 1,
+      "productId": 12,
+      "id": 3
+    },
+    {
+      "productName": "lenovo HP",
+      "price": "34450",
+      "category": "Laptop",
+      "color": "black",
+      "description": "this is HP laptop. Intel core i3 11th Gen, (8GB/256 GB SSD) 1.56KG",
+      "image": "https://rukminim2.flixcart.com/image/416/416/xif0q/computer/c/o/k/-original-imagwzwdcrrewxxz.jpeg?q=70&crop=false",
+      "quantity": 1,
+      "userId": 4,
+      "productId": 12,
+      "id": 4
+    },
+    {
+      "productName": "lenovo HP",
+      "price": "34450",
+      "category": "Laptop",
+      "color": "black",
+      "description": "this is HP laptop. Intel core i3 11th Gen, (8GB/256 GB SSD) 1.56KG",
+      "image": "https://rukminim2.flixcart.com/image/416/416/xif0q/computer/c/o/k/-original-imagwzwdcrrewxxz.jpeg?q=70&crop=false",
+      "quantity": 1,
+      "userId": 4,
+      "productId": 12,
+      "id": 5
     }
   ],
   "comments": [

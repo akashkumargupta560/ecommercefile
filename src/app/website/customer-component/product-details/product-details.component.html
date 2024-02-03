@@ -1,0 +1,29 @@
+<div class="product-details-page">
+    <div class="row" *ngIf="productDetails">
+        <div class="col-sm-6">
+            <img class="product-image" src="{{productDetails.image}}" alt="" width="250" height="250">
+        </div>
+        <div class="col-md-6">
+            <div class="product-detail mt-3">
+                <h1>{{productDetails.productName |titlecase}}</h1>
+                <h3>Price: {{productDetails.price | currency: 'INR':'symbol':'1.2-2'}}</h3>
+                <div class="">
+                    Color:
+                    <h5 [style.backgroundColor]="productDetails.color" class="product-color"></h5>
+                </div>
+                <h6>Category: {{productDetails.category}}</h6>
+                <h6>{{productDetails.description | titlecase}}</h6>
+
+                <button type="button" *ngIf="!removeCart" class="btn btn-outline-info" (click)="addToCart()">Add to Cart</button>&nbsp;&nbsp;
+                <button type="button" *ngIf="removeCart" class="btn btn-outline-info" (click)="removeToCart(productDetails.id)">Remove to Cart</button>&nbsp;&nbsp;
+                <button type="button" class="btn btn-outline-info">Buy Now</button>
+
+                <div class="quantity-group mt-3">
+                    <button type="button" class="btn btn-outline-warning" (click)="handalQuantity('min')">-</button>&nbsp;
+                    <input type="text" class="quantity-rang" value="{{productQuantity}}" />&nbsp;
+                    <button type="button" class="btn btn-outline-warning" (click)="handalQuantity('plus')">+</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

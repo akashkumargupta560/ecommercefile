@@ -1,0 +1,29 @@
+::ng-deep {
+    .searching-page{
+        .search-item {
+            margin: 44px auto;
+            padding: 10px;
+            border-top: 1px solid #ddd;
+    
+            .images {
+                img {
+                    height: 250px;
+                }
+            }
+    
+            .details {
+                p {
+                    margin-bottom: 5px;
+                }
+            }
+        }
+    }
+
+    .sarchError {
+        text-align: center;
+        font-size: 27px;
+        font-family: monospace;
+        margin-top: 20px;
+        color: red;
+    }
+}

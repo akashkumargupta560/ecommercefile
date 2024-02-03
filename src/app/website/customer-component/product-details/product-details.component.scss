@@ -1,0 +1,23 @@
+::ng-deep {
+    .product-details-page {
+        margin: 10px 10px;
+
+        // .product-image{}
+        .product-detail {
+            .product-color {
+                border: 3px solid #000;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+            }
+
+            .quantity-group {
+                .quantity-rang {
+                    text-align: center;
+                    width: 10%;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+}

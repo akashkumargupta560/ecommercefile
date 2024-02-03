@@ -1,33 +1,65 @@
 ::ng-deep {
     nav {
         .container-fluid {
+            .navbar-brand {
+                span {
+                    font-size: 11px;
+                }
+            }
+
             .collapse {
                 margin-left: 50px;
 
                 .input-box {
                     width: 80%;
-                    //margin-left: 65px;
                 }
-                .users-menu{
-                    .user-logout, .seller-logout{
+
+                .suggested-result {
+                    position: absolute;
+                    display: list-item;
+                    z-index: 999;
+                    /* color: white; */
+                    list-style-type: none;
+                    top: 35px;
+                    border: 1px solid #fff;
+                    padding: 10px 91px;
+                    width: 27%;
+                    background-color: #fff;
+                    opacity: .7;
+
+                    li {
+                        a {
+                            color: black;
+                            text-transform: none !important;
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+                .users-menu {
+
+                    .user-logout,
+                    .seller-logout {
                         background-color: red;
                         border-radius: 10px;
                         cursor: pointer;
                     }
-                    .sellername{
+
+                    .sellername {
                         background-color: green;
                         border-radius: 20px;
                         margin-left: 12px;
                         border: 1px solid;
-                        a{
+
+                        a {
                             color: greenyellow;
                         }
                     }
+
+                    // .user-auth{
+                    //     cursor: pointer;
+                    // }
                 }
-                // .seller-log{
-                //     justify-content: end !important;
-                //     width: 100% !important;
-                // }
             }
         }
     }
