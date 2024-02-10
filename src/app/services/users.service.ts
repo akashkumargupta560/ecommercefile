@@ -24,9 +24,10 @@ export class UsersService {
   userLoginApi(data:authLogin){
     this.http.get(`http://localhost:3000/users?email=${data.email}&password=${data.password}`,{observe:'response'}).subscribe((result:any) =>{
       if(result && result.body && result.body.length === 1){
-        this.isLoginErr.emit(false);
+        console.log("Login API called :", result.body)
         localStorage.setItem('user',JSON.stringify(result.body));
         this.router.navigate(['/']);
+        this.isLoginErr.emit(false);
       }else{
          console.warn('Login Failed');
         this.isLoginErr.emit(true);

@@ -30,10 +30,9 @@ export class NavbarComponent {
           let userStore = localStorage.getItem('user');
           let userData = userStore && JSON.parse(userStore)[0];
           this.userName = userData.fullname;
-          // console.log("user",this.userName)
           this.menuItem = 'user';
+          this.productSrv.getCartList(userData.id);
         } else {
-          // console.warn('outside to selle area');
           this.menuItem = 'default';
         }
       }
@@ -46,11 +45,6 @@ export class NavbarComponent {
       this.cartItems =items.length;
     });
   }
-  // logOut() {
-  //   localStorage.removeItem('seller');
-  //   this.router.navigate(['/']);
-  // }
-
 
   logOut() {
     if (this.sellerName) {
@@ -59,9 +53,8 @@ export class NavbarComponent {
 
     } else if (this.userName) {
       localStorage.removeItem('user');
-      this.router.navigate(['/'])
-    } else {
-
+      this.router.navigate(['/']);
+      this.productSrv.cartData.emit([]);
     }
 
   }

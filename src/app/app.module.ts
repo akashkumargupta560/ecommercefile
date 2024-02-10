@@ -17,6 +17,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SearchComponent } from './website/search/search.component';
 import { ProductDetailsComponent } from './website/customer-component/product-details/product-details.component';
 import { UserAuthComponent } from './website/customer-component/user-auth/user-auth.component';
+import { ContactPageComponent } from './website/customer-component/contact-page/contact-page.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +31,8 @@ import { UserAuthComponent } from './website/customer-component/user-auth/user-a
     SellerUpdateProductComponent,
     SearchComponent,
     ProductDetailsComponent,
-    UserAuthComponent
+    UserAuthComponent,
+    ContactPageComponent
   ],
   imports: [
     BrowserModule,

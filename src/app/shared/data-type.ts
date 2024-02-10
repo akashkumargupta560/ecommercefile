@@ -8,26 +8,25 @@ export  interface authLogin{
     password:string;
 }
 export interface sellerAddProduct{
+    productName:string,
+    price:number,
+    category:string,
+    color:string,
+    image:string,
+    description:string,
     id:number,
-    productName:string;
-    color:string;
-    price:number;
-    description:string;
-    image:string;
-    productUrl:string;
-    category:string;
-    quantity:string | number;
+    quantity:undefined | number,
+    productId:undefined | number
 }
 export interface cart{
-    id:number | undefined;
-    productName:string;
-    color:string;
-    price:number;
-    description:string;
-    image:string;
-    productUrl:string;
-    category:string;
-    quantity:string | number;
+    productName:string,
+    price:number,
+    category:string,
+    color:string,
+    image:string,
+    description:string,
+    id:number | undefined,
+    quantity:undefined | number,
     userId:number,
-    productId:number;
+    productId:number,
 }

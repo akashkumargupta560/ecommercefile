@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
+import { ProductsService } from 'src/app/services/products.service';
 import { UsersService } from 'src/app/services/users.service';
-import { authRegister, authLogin } from 'src/app/shared/data-type';
+import { authRegister, authLogin, sellerAddProduct, cart } from 'src/app/shared/data-type';
 
 @Component({
   selector: 'app-user-auth',
@@ -13,7 +14,7 @@ export class UserAuthComponent {
 
   isShowLogin = false;
   authError!: string | undefined;
-  constructor(private userSrv:UsersService) { }
+  constructor(private userSrv:UsersService, private productSrv:ProductsService) { }
   ngOnInit(): void { 
     this.userSrv.userReloader();
   }
@@ -26,6 +27,8 @@ export class UserAuthComponent {
     this.userSrv.isLoginErr.subscribe((isError)=>{
       if(isError){
         this.authError ="Email or Password is not Correct!";
+      }else{
+        this.localCartToRemoteCart();
       }
       setTimeout(()=>{
         this.authError=undefined;
@@ -39,4 +42,38 @@ export class UserAuthComponent {
   openSignUpform() {
     this.isShowLogin = false
   }
+  localCartToRemoteCart(){
+    let data = localStorage.getItem('localCart');
+    let user = localStorage.getItem('user');
+    let userId= user && JSON.parse(user)[0].id;
+    console.log("user-auth-id",userId)
+    if(data){
+     let cartDataList:sellerAddProduct[]= JSON.parse(data);
+       console.log('Logged in userId:', user);
+      console.log('Logged in userId:', userId);
+     cartDataList.forEach((product:sellerAddProduct, index)=>{
+       let cartData:cart={
+         ...product,
+         productId:product.id,
+         userId
+       }
+       delete cartData.id;
+       setTimeout(() => {
+         this.productSrv.addToCartApi(cartData).subscribe((result)=>{
+           if(result){
+             console.warn("data is stored in DB");
+           }
+         })
+       }, 500);
+       if(cartDataList.length===index+1){
+         localStorage.removeItem('localCart')
+       }
+     })
+    }
+ 
+    setTimeout(() => {
+     this.productSrv.getCartList(userId)
+    }, 2000);
+     
+   }
 }

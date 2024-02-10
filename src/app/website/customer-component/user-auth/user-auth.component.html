@@ -1,6 +1,6 @@
 <div class="user-auth-section mt-3">
     <!--User SignUp-Form -->
-    <div class="row mx-0" *ngIf="!isShowLogin">
+    <div class="row mx-0" *ngIf="isShowLogin">
       <div class="col-md-6">
         <h1>User SignUp Application</h1>
       </div>
@@ -33,7 +33,7 @@
   
     <!-- User Login-Form -->
   
-    <div class="row mx-0" *ngIf="isShowLogin">
+    <div class="row mx-0" *ngIf="!isShowLogin">
       <div class="col-md-6">
         <h1>Login Application</h1>
       </div>
