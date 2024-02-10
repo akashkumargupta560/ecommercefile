@@ -18,6 +18,7 @@ import { SearchComponent } from './website/search/search.component';
 import { ProductDetailsComponent } from './website/customer-component/product-details/product-details.component';
 import { UserAuthComponent } from './website/customer-component/user-auth/user-auth.component';
 import { ContactPageComponent } from './website/customer-component/contact-page/contact-page.component';
+import { CartPageComponent } from './website/customer-component/cart-page/cart-page.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +33,8 @@ import { ContactPageComponent } from './website/customer-component/contact-page/
     SearchComponent,
     ProductDetailsComponent,
     UserAuthComponent,
-    ContactPageComponent
+    ContactPageComponent,
+    CartPageComponent
   ],
   imports: [
     BrowserModule,
