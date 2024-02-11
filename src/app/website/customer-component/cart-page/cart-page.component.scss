@@ -1,42 +1,37 @@
-// :ng-deep{
+// :ng-deep{ box-shadow: 2px 1px 10px 2px;
 .cart-page {
-    margin: 20px 15px;
-
-    .cart-cantainer {
-        // box-shadow: 2px 1px 10px 2px;
-        // padding: 10px;
-        // border-radius: 10px;
-        border: 1px solid black;
-        border-radius: 10px;
-        .cart-items { 
-            display: flex;
-            column-gap: 80px;
-            border-bottom: 1px solid gray;
-            .cart-img {
-               width: 120px;
-               height: 120px;
-            }
-            .cart-details{
-                display: flex;
-                column-gap: 30px;
-                align-items: baseline;
-                margin-top: 40px;
-            }
-        }
+    margin: 40px 15px;
+    .details{
+        border: 1px solid #dddd;  
     }
-    .summary-cart{
+    .details img{
+        height: 100px;
+    }
+    .details ul{
         box-shadow: 2px 1px 10px 2px;
-        padding: 10px;
+        padding: 20px 40px;
         border-radius: 10px;
-        .summary-details{
-            .cart-amount{
-                p{
-                    display: flex;
-                    justify-content: space-around;
-                }
-                
-            }
-        }
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style-type: none;
+        border-bottom: 1px solid #dddd;
+        padding-bottom: 15px;
+        margin-bottom: 20px;
+    }
+    .summary{
+        margin: 20px 0px;
+    }
+    .summary ul{
+        box-shadow: 2px 1px 10px 2px;
+        border-radius: 10px;
+        list-style-type: none;
+        padding: 5%;
+    }
+    .summary ul li{
+        display: flex;
+        justify-content: space-between;
     }
  
 }
