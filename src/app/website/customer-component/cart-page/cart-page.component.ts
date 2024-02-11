@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./cart-page.component.scss']
 })
 export class CartPageComponent {
+  showDiv:boolean=false;
+  openCart(){
+    this.showDiv=true;
+  }
 
 }

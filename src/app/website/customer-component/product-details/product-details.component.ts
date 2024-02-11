@@ -74,7 +74,6 @@ export class ProductDetailsComponent {
           productId:this.productDetails.id,
         }
         delete cartData.id;
-        console.warn("loggged user cartData",cartData);
         this.productSrv.addToCartApi(cartData).subscribe((result)=>{
           
           if(result){
@@ -94,9 +93,6 @@ export class ProductDetailsComponent {
     }else{
       let user = localStorage.getItem('user');
       let userId = user && JSON.parse(user)[0].id;
-      console.warn("card-data-->>",userId);
-      
-      console.warn(this.cartData);
       this.cartData && this.productSrv.removeToCart(this.cartData.id).subscribe((result)=>{
         if(result){
           this.productSrv.getCartList(userId);

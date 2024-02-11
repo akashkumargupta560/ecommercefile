@@ -212,6 +212,18 @@
       "productId": 14,
       "userId": 1,
       "id": 7
+    },
+    {
+      "productName": "PHILIPS Home Theatre",
+      "price": "7499",
+      "category": "Speaker",
+      "color": "Black",
+      "description": "MMS8085B/94 Convertible 80 W Bluetooth Home Theatre  (Black, 2.1 Channel)",
+      "image": "https://rukminim2.flixcart.com/image/416/416/ko0d6kw0/speaker/home-theatre/o/i/g/mms8085b-94-philips-original-imag2k3tn8zrgw4f.jpeg?q=70&crop=false",
+      "quantity": 1,
+      "productId": 13,
+      "userId": 3,
+      "id": 8
     }
   ],
   "comments": [
