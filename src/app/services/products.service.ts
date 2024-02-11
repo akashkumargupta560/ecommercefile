@@ -76,4 +76,9 @@ export class ProductsService {
   removeToCart(cardId:number){
     return this.http.delete<sellerAddProduct[]>(this.cartUrl+`${cardId}`);
   }
+  currentCart(){
+    let userStore = localStorage.getItem('user');
+    let userData = userStore && JSON.parse(userStore)[0];
+    return this.http.get<cart[]>('http://localhost:3000/cart?userId='+userData.id)
+  }
 }
