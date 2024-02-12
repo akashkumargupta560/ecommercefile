@@ -1,0 +1,27 @@
+.my-order{
+    margin: 40px 20px;
+    h1{
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .order-header{
+        text-transform: capitalize;
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
+    .order-details{
+        box-shadow: 2px 1px 10px 2px;
+        padding: 15px 0;
+        border-radius: 10px;
+        .order-img{
+            height: 100px;
+        }
+        span{
+            text-transform: capitalize;
+            button{
+                text-transform: capitalize;
+            }
+        }
+    }
+}

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { ProductsService } from 'src/app/services/products.service';
 import { order } from 'src/app/shared/data-type';
 
@@ -9,7 +10,7 @@ import { order } from 'src/app/shared/data-type';
 })
 export class CheckoutPageComponent {
   totalPrice: number | undefined;
-  constructor(private productSrv:ProductsService){}
+  constructor(private productSrv:ProductsService,private route:Router){}
 
   ngOnInit():void{
     this.productSrv.currentCart().subscribe((result) =>{
@@ -37,7 +38,8 @@ export class CheckoutPageComponent {
       }
       this.productSrv.orderNow(orderData).subscribe((result) =>{
         if(result){
-          alert('Your Order Placed!');
+          // alert('Your Order Placed!');
+          this.route.navigate(['/my-order'])
         }
       });
     }
