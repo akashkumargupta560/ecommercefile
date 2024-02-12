@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { ProductsService } from 'src/app/services/products.service';
-import { order } from 'src/app/shared/data-type';
+import { cart, order } from 'src/app/shared/data-type';
 
 @Component({
   selector: 'app-checkout-page',
@@ -10,12 +10,15 @@ import { order } from 'src/app/shared/data-type';
 })
 export class CheckoutPageComponent {
   totalPrice: number | undefined;
+  cartData:cart [] | undefined;
+  orderMsg: string | undefined;
   constructor(private productSrv:ProductsService,private route:Router){}
 
   ngOnInit():void{
     this.productSrv.currentCart().subscribe((result) =>{
       // console.warn("cart-page",this.cartData)this.priceSummary.total =100+(price-((price*10)/100))-(price/10);
       let price =0;
+      this.cartData =result;  
       result.forEach((items)=>{
         if(items.quantity){
           price = price+(+items.price *items.quantity)
@@ -34,12 +37,22 @@ export class CheckoutPageComponent {
       let orderData:order ={
         ...data,
         totalPrice:this.totalPrice,
-        userId
+        userId,
+        id:undefined
       }
+      this.cartData?.forEach((item) => {
+        setTimeout(() => {
+          item.id && this.productSrv.deleteCartItems(item.id);
+        }, 700)
+      })
       this.productSrv.orderNow(orderData).subscribe((result) =>{
         if(result){
           // alert('Your Order Placed!');
-          this.route.navigate(['/my-order'])
+          this.orderMsg ='Your Order has been Placed!';
+          setTimeout(() =>{
+            this.route.navigate(['/my-order']);
+            this.orderMsg = undefined;
+          },400)
         }
       });
     }

@@ -17,15 +17,15 @@
             <span>action</span>
         </div>
     </div>
-    <div class="row order-details">
+    <div class="row order-details" *ngFor="let orders of orderData">
         <div class="col-sm-2">
-            <img class="order-img" src="" alt="">
+            <img class="order-img" src="../../../../assets/order-image/vector-cartoon-illustration-shopping-cart-with-goods-trolley-full-things_253349-2920.avif" alt="">
         </div>
         <div class="col-sm-2">
-            <span>#3210</span>
+            <span>#{{orders.id}}</span>
         </div>
         <div class="col-sm-2">
-            <span>13000</span>
+            <span>{{orders.totalPrice | currency: 'INR':'symbol':'1.2-2'}}</span>
         </div>
         <div class="col-sm-2">
             <span>in process</span>

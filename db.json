@@ -212,42 +212,6 @@
       "productId": 14,
       "userId": 1,
       "id": 7
-    },
-    {
-      "productName": "PHILIPS Home Theatre",
-      "price": "7499",
-      "category": "Speaker",
-      "color": "Black",
-      "description": "MMS8085B/94 Convertible 80 W Bluetooth Home Theatre  (Black, 2.1 Channel)",
-      "image": "https://rukminim2.flixcart.com/image/416/416/ko0d6kw0/speaker/home-theatre/o/i/g/mms8085b-94-philips-original-imag2k3tn8zrgw4f.jpeg?q=70&crop=false",
-      "quantity": 1,
-      "productId": 13,
-      "userId": 3,
-      "id": 8
-    },
-    {
-      "productName": "U.S. POLO ASSN. Shoe",
-      "price": "3374",
-      "category": "Sports Shoe",
-      "color": "Multicolor",
-      "description": "Running Shoes For Men ",
-      "image": "https://rukminim2.flixcart.com/image/832/832/xif0q/shoe/f/a/z/10-2fd21478-10-u-s-polo-assn-multi2-original-imagpuft79zbjmnh.jpeg?q=70&crop=true",
-      "quantity": 1,
-      "userId": 3,
-      "productId": 14,
-      "id": 9
-    },
-    {
-      "productName": "lenovo HP",
-      "price": "34450",
-      "category": "Laptop",
-      "color": "black",
-      "description": "this is HP laptop. Intel core i3 11th Gen, (8GB/256 GB SSD) 1.56KG",
-      "image": "https://rukminim2.flixcart.com/image/416/416/xif0q/computer/c/o/k/-original-imagwzwdcrrewxxz.jpeg?q=70&crop=false",
-      "quantity": 5,
-      "userId": 3,
-      "productId": 12,
-      "id": 10
     }
   ],
   "order": [
@@ -258,6 +222,22 @@
       "totalPrice": 191361.8,
       "userId": 3,
       "id": 1
+    },
+    {
+      "email": "monu@gmail.com",
+      "address": "mohali phase 5",
+      "contact": "7865325",
+      "totalPrice": 191361.8,
+      "userId": 3,
+      "id": 2
+    },
+    {
+      "email": "monu@gmail.com",
+      "address": "sohana punjab",
+      "contact": "35777944",
+      "totalPrice": 814760.4,
+      "userId": 3,
+      "id": 3
     }
   ],
   "comments": [
