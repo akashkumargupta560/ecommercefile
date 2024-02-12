@@ -27,6 +27,9 @@
                 <li><span>delivery:</span><span>{{priceSummary.delivery}}</span></li>
                 <li><span>discount:</span><span>{{priceSummary.discount | number}}</span></li>
                 <li class="fw-bold"><span>total:</span><span>{{finalyPrice | number}}</span></li>
+                <div class="gap-2 d-grid">
+                    <button type="button" class="btn btn-success text-capitalize" (click)="checkOut()">checkout</button>
+                </div>
             </ul>
         </div>
     </div>

@@ -19,6 +19,7 @@ import { ProductDetailsComponent } from './website/customer-component/product-de
 import { UserAuthComponent } from './website/customer-component/user-auth/user-auth.component';
 import { ContactPageComponent } from './website/customer-component/contact-page/contact-page.component';
 import { CartPageComponent } from './website/customer-component/cart-page/cart-page.component';
+import { CheckoutPageComponent } from './website/customer-component/checkout-page/checkout-page.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +35,8 @@ import { CartPageComponent } from './website/customer-component/cart-page/cart-p
     ProductDetailsComponent,
     UserAuthComponent,
     ContactPageComponent,
-    CartPageComponent
+    CartPageComponent,
+    CheckoutPageComponent
   ],
   imports: [
     BrowserModule,

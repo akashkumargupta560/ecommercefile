@@ -10,6 +10,7 @@ import { SearchComponent } from './website/search/search.component';
 import { ProductDetailsComponent } from './website/customer-component/product-details/product-details.component';
 import { UserAuthComponent } from './website/customer-component/user-auth/user-auth.component';
 import { CartPageComponent } from './website/customer-component/cart-page/cart-page.component';
+import { CheckoutPageComponent } from './website/customer-component/checkout-page/checkout-page.component';
 
 
 
@@ -39,6 +40,9 @@ const routes: Routes = [
   },
   {
     path:'cart-page', component:CartPageComponent
+  },
+  {
+    path:"checkout", component:CheckoutPageComponent
   }
 ];
 

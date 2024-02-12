@@ -1,4 +1,5 @@
 import { Component,OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ProductsService } from 'src/app/services/products.service';
 import { cart, priceSummary } from 'src/app/shared/data-type';
 
@@ -17,7 +18,7 @@ export class CartPageComponent {
     delivery:0,
     total:0
   }
-  constructor(private productSrv:ProductsService){}
+  constructor(private productSrv:ProductsService, private route:Router){}
   ngOnInit(): void {
     this.productSrv.currentCart().subscribe((result) =>{
       this.cartData =result;
@@ -38,6 +39,9 @@ export class CartPageComponent {
     
     });
     
+  }
+  checkOut(){
+      this.route.navigate(['/checkout']);
   }
   
 

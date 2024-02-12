@@ -1,13 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { EventEmitter, Injectable } from '@angular/core';
-import { cart, sellerAddProduct } from '../shared/data-type';
+import { cart, order, sellerAddProduct } from '../shared/data-type';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductsService {
   apiUrl = 'http://localhost:3000/products/';
-  cartUrl = 'http://localhost:3000/cart/'
+  cartUrl = 'http://localhost:3000/cart/';
+  orderUrl = 'http://localhost:3000/order/';
   cartData = new EventEmitter<sellerAddProduct[] | []>();
 
   constructor(private http: HttpClient) { }
@@ -80,5 +81,8 @@ export class ProductsService {
     let userStore = localStorage.getItem('user');
     let userData = userStore && JSON.parse(userStore)[0];
     return this.http.get<cart[]>('http://localhost:3000/cart?userId='+userData.id)
+  }
+  orderNow(data:order){
+    return this.http.post(this.orderUrl,data);
   }
 }
