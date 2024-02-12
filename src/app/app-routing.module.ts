@@ -11,6 +11,7 @@ import { ProductDetailsComponent } from './website/customer-component/product-de
 import { UserAuthComponent } from './website/customer-component/user-auth/user-auth.component';
 import { CartPageComponent } from './website/customer-component/cart-page/cart-page.component';
 import { CheckoutPageComponent } from './website/customer-component/checkout-page/checkout-page.component';
+import { MyOrderComponent } from './website/customer-component/my-order/my-order.component';
 
 
 
@@ -43,6 +44,9 @@ const routes: Routes = [
   },
   {
     path:"checkout", component:CheckoutPageComponent
+  },
+  {
+    path:'my-order', component:MyOrderComponent
   }
 ];
 
