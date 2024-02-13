@@ -20,6 +20,18 @@ export class CartPageComponent {
   }
   constructor(private productSrv:ProductsService, private route:Router){}
   ngOnInit(): void {
+    this.cartDetails();
+    
+  }
+  removeToCart(cartId:number|undefined){
+      cartId && this.productSrv.removeToCart(cartId).subscribe((result)=>{
+        this.cartDetails();
+      });
+  }
+  checkOut(){
+      this.route.navigate(['/checkout']);
+  }
+  cartDetails(){
     this.productSrv.currentCart().subscribe((result) =>{
       this.cartData =result;
       // console.warn("cart-page",this.cartData)this.priceSummary.total =100+(price-((price*10)/100))-(price/10);
@@ -36,12 +48,11 @@ export class CartPageComponent {
       this.priceSummary.delivery = 100;
       this.priceSummary.total =price+(price/10)+100-(price/18);
       this.finalyPrice = this.priceSummary.total;
+      if(!this.cartData.length){
+        this.route.navigate(['/'])
+      }
     
     });
-    
-  }
-  checkOut(){
-      this.route.navigate(['/checkout']);
   }
   
 
