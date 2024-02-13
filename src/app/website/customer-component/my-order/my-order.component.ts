@@ -11,6 +11,14 @@ export class MyOrderComponent {
   orderData:order[] | undefined;
   constructor(private productSrc:ProductsService){}
   ngOnInit():void{
+    this.getOrderList();
+  }
+  cancelOrder(orderId:number | undefined){
+    orderId && this.productSrc.cancelOrder(orderId).subscribe((result) =>{
+      this.getOrderList();
+    });
+  }
+  getOrderList(){
     this.productSrc.orderList().subscribe((result) =>{
       this.orderData = result;
     });

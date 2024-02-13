@@ -17,7 +17,7 @@
             <span>action</span>
         </div>
     </div>
-    <div class="row order-details" *ngFor="let orders of orderData">
+    <div class="row order-details mt-2" *ngFor="let orders of orderData">
         <div class="col-sm-2">
             <img class="order-img" src="../../../../assets/order-image/vector-cartoon-illustration-shopping-cart-with-goods-trolley-full-things_253349-2920.avif" alt="">
         </div>
@@ -31,7 +31,7 @@
             <span>in process</span>
         </div>
         <div class="col-sm-2">
-            <span><button type="submit" class="btn btn-primary mb-5">cancel order</button></span>
+            <span><button type="submit" class="btn btn-primary mb-5" (click)="cancelOrder(orders.id)">cancel order</button></span>
         </div>
     </div>
 </div>
